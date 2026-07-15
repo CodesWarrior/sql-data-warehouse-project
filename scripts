@@ -1,4 +1,3 @@
-
 /*
 =============================================================
 Create Database and Schemas
@@ -14,8 +13,29 @@ WARNING:
     and ensure you have proper backups before running this script.
 */
 
-
-
-CREATE DATABASE DataWareHouse;
+USE master;
 
 USE DataWareHouse;
+
+Go
+-- DROP and recreate the 'DataWareHouse' database
+
+IF EXIST (SELECT 1 FROM sys.databases Where name ='DataWareHouse')
+BEGIN 
+Alter database DataWareHouaw SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+DROP DATABASE DataWareHouse;
+end;
+
+--CREATE THE DataWareHouse database
+CREATE DATABASE DataWareHouse;
+
+-- GO IS SEPARATOR
+
+GO
+Create Schema bronze;
+GO
+CREATE Schema silver;
+GO
+CREATE Schema gold;
+GO
+
