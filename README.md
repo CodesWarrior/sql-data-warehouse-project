@@ -71,3 +71,6 @@ The project uses data from the following source systems:
 Source	Description	Format
 CRM	Customer, product, and sales information	CSV
 ERP	Customer location and additional customer information	CSV
+
+##about me
+Hi there! I’m Jean, an aspiring data analyst. This is my first portfolio project with SQL server, which I created by following a YouTube tutorial by Data with Baraa.
